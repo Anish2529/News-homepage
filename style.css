@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Inter;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    padding: 90px 165px;
+
+    background-color: hsl(36, 100%, 99%);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items{
+    display: flex;
+    gap: 40px;
+}
+.link{
+    font-family: Inter;
+    color: hsl(240, 100%, 5%);
+}
+.link:hover{
+    color: hsl(5, 85%, 63%);
+}
+.open, .close{
+    display: none;
+    z-index: 5;
+    cursor: pointer;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow{
+    overflow: scroll;
+}
+.active-nav{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 70vw;
+    height: 100vh;
+    background-color: white;
+
+    padding: 150px 35px;
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.container{
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    gap: 30px;
+}
+.banner{
+    grid-column: 1/3;
+
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+}
+.banner img{
+    display: none;
+}
+
+.new{
+    grid-row: 1/3;
+    grid-column: 3/4;
+    width: 100%;
+
+    background-color: hsl(240, 100%, 5%);
+
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+
+    font-family: Inter;
+}
+.new h1{
+    color: hsl(35, 77%, 62%);
+    font-size: 41px;
+    font-weight: 800;
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+}
+.report{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.report h1{
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+}
+.report h1:hover{
+    color: hsl(35, 77%, 62%);
+}
+.report p{
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+
+.heading{
+    grid-row: 2/3;
+}
+.heading h1{   
+    font-family: Inter;
+    font-size: 54px;
+    line-height: 58px;
+    color: hsl(240, 100%, 5%);
+    font-weight: 800;
+}
+.body{
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.body p{
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 24px;
+    color: hsl(240, 100%, 5%);
+}
+.body button{
+    width: 50%;
+    height: 50px;
+    background-color: hsl(5, 85%, 63%);
+
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    
+    border: none;
+    outline: none;
+}
+.body button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+
+
+.card-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.cards{
+    display: flex;
+    gap: 25px;
+
+    height: 125px;
+
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Inter;
+}
+.number{
+    font-size: 32px;
+    font-weight: 700;
+    color: hsl(233, 8%, 79%);
+}
+.text h1{
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(240, 100%, 5%);
+}
+.text h1:hover{
+    color: hsl(5, 85%, 63%);
+}
+.text p{
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(236, 13%, 42%);
+}
+
+
+@media screen and (max-width:1024px){
+    main{
+        padding: 28px 15px;
+    }
+    .open{
+        display: block;
+    }
+    .items{
+        display: none;
+    }
+
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .banner{   
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+        background-size: cover;
+    }
+    .banner img{
+        display: block;
+        width: 100%;
+    }
+    .heading h1{   
+        font-size: 48px;
+    }
+    .body{
+        gap: 25px;
+    }
+    .card-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 70px;
+    }
+
+}
